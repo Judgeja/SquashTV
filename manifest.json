@@ -1,0 +1,27 @@
+{
+  "name": "SquashTV Spoilers",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Removes names and images from video titles.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://psaworldtour.com/tv/tournament/*"
+      ],
+      "js": [
+        "content_scripts/squashtv-nospoiler.js"
+      ],
+      "css": [
+        "content_scripts/squashtv-nospoiler.css"
+      ]
+    }
+  ],
+  "host_permissions": [
+ 
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

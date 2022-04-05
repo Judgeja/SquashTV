@@ -1,0 +1,14 @@
+
+.videoplayer__title, .videoplayer__video img, .videoplayer__description  {
+  display: none;
+}
+
+.videoplayer__video .content::before{
+  position: absolute;
+  content: 'Hidden By Extension: SquashTV Spoilers';
+    font-size: 2em;
+    margin: 0.5em;
+    font-weight: bold;
+    color: white;
+}
+
