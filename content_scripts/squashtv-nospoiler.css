@@ -1,14 +1,47 @@
 
-.videoplayer__title, .videoplayer__video img, .videoplayer__description  {
+.videoplayer__title, .videoplayer__video img, .videoplayer__description, .item__title {
   display: none;
+  opacity: 0;
 }
 
 .videoplayer__video .content::before{
   position: absolute;
-  content: 'Hidden By Extension: SquashTV Spoilers';
+  content: 'Hidden By SquashTV Spoilers';
     font-size: 2em;
     margin: 0.5em;
     font-weight: bold;
     color: white;
 }
 
+.squashtv-nospoiler-controls {
+  text-align: center;
+  margin: 10px;
+}
+
+.squashtv-nospoiler-controls button {
+  opacity: .8;
+  border: none;
+  border-radius: 5px;
+  background: #ffe426;
+  font-size: 1.3em;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-right: .3em;
+}
+
+.squashtv-nospoiler-controls button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.squashtv-nospoiler-controls input {
+  opacity: .8;
+  border-bottom: 4px solid #ffe426;
+  width: 3em;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.squashtv-nospoiler-controls input:hover {
+  opacity: 1;
+}
