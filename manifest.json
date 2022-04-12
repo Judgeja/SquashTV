@@ -2,7 +2,7 @@
   "name": "SquashTV Spoilers",
   "version": "1.0.1",
   "manifest_version": 3,
-  "description": "Removes names and images from video titles. Code available on github at https://github.com/Judgeja/SquashTV. Follow me on Twitter @TheJamhead ",
+  "description": "Removes names and images from video titles.",
   "content_scripts": [
     {
       "matches": [
