@@ -1,6 +1,6 @@
 {
   "name": "SquashTV Spoilers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "description": "Removes names and images from video titles.",
   "content_scripts": [
