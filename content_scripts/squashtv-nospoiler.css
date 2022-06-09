@@ -45,11 +45,16 @@
 .squashtv-nospoiler-controls input {
   opacity: .8;
   border-bottom: 4px solid #ffe426;
-  width: 3em;
+  width: 2em;
   font-size: 1.1em;
   font-weight: bold;
 }
 
 .squashtv-nospoiler-controls input:hover {
   opacity: 1;
+}
+
+.squashtv-nospoiler-controls span {
+  color: white;
+  font-weight: bold;;
 }
