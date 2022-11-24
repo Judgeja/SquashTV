@@ -1,13 +1,15 @@
 {
   "name": "SquashTV Spoilers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "manifest_version": 3,
-  "description": "Removes names and images from video titles.",
+  "description": "Removes names and images from video titles, and time display from the video.",
   "content_scripts": [
     {
       "matches": [
-        "https://psaworldtour.com/tv/tournament/*",
-        "https://psaworldtour.com/videos/view/*"
+        "https://www.squash.tv/",
+        "https://www.squash.tv/highlights/*",
+        "https://www.squash.tv/replays/*",
+        "https://squash.tv/replays/*"
       ],
       "js": [
         "content_scripts/squashtv-nospoiler.js"
@@ -15,21 +17,8 @@
       "css": [
         "content_scripts/squashtv-nospoiler.css"
       ]
-    },
-    {
-      "matches": [
-        "https://geo.dailymotion.com/*"
-      ],
-      "css": [
-        "content_scripts/dailymotion.css"
-      ], 
-      "all_frames": true
     }
   ],
-  "web_accessible_resources": [{
-    "resources": ["js/squashtv-nospoiler-video.js"],
-    "matches": ["<all_urls>"]
-  }],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
