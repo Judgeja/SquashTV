@@ -43,7 +43,7 @@ function replaceSpoilerImagesAndText(){
     var newTopList = document.createElement("div");
     newTopList.className="squashtv-nospoiler-toplist";
     var newTopListExplain = document.createElement("p");
-    newTopListExplain.innerHTML = "I hate the featured slider so much that I've replaced it with just the text links minus names.<br/>You can hover on any links to see the original link title for the player names. <br/><br/>If you like the \"SquashTV Spoilers\" extension please leave a good review on the extension page. <br/>(If you had issues, please send feedback to jajudgeja@gmail.com)";
+    newTopListExplain.innerHTML = "You can hover on any links to see the original link title for the player names. <br/><br/>If you like the \"SquashTV Spoilers\" extension please leave a good review on the extension page. <br/>(If you had issues, please send feedback to jajudgeja@gmail.com)";
     newTopList.append(newTopListExplain);
     //newTopList.style.height = stupidListHeight;
     main.prepend(newTopList);

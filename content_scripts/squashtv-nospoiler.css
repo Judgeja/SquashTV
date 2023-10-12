@@ -3,10 +3,10 @@ article .featured-image img, .article-related .repeat-inner img, article .featur
   display: none;
   opacity: 0;
 }
-
+/* 
 .vjs-time-control,  .vjs-progress-control, .featured {
   display: none!important;
-}
+} */
 
 article .title a, .article-related .repeat-inner h2 a{
   opacity: 0;
