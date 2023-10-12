@@ -1,7 +1,16 @@
 
+var s = document.createElement('script');
+s.src = chrome.runtime.getURL('/js/squashtv-nospoiler-video.js');
+s.onload = function() {
+    this.remove();
+};
+(document.head || document.documentElement).appendChild(s);
+
+
 window.onload = () => {
   replaceSpoilerImagesAndText();
   addPlayerControls();
+  setupClickHandlers();
 }
 
 ///////
@@ -26,7 +35,7 @@ function replaceSpoilerImagesAndText(){
     vid.style.display = "inline-block";
     vid.style.opacity = "1";
   }
-  
+
 
   // If there's a stupid apparently SLICK-list featured at the top, then remove that piece of crap.
   if(document.querySelectorAll(".featured .slick-list").length > 0){
@@ -50,16 +59,46 @@ function replaceSpoilerImagesAndText(){
     }
   }
 }
+
+
+
+
+
+  
+  
 function removePlayerNames(vidTitle){
-  var parts = vidTitle.split("–");
-  var newName = "";
-  for(var i=0; i<parts.length; i++){
-    let section = parts[i];
-    if(section.indexOf(" v ") < 0 && section.indexOf(" vs ") < 0){
-      newName += parts[i];
+  if(vidTitle.indexOf(" v ") < 0  && vidTitle.indexOf(" vs ") < 0 ){ return vidTitle; }
+  var markers = "–-|:_>".split("")
+  var namePart = vidTitle;
+  var newTitle = "";
+  for(var i=0; i< markers.length; i++){
+    if(namePart.indexOf(markers[i])){
+      var parts = namePart.split(markers[i]);
+      if(parts.length == 1){
+          continue;
+      }
+      for(j=0; j<parts.length; j++){
+        if(parts[j].indexOf(" v ") >=0 || parts[j].indexOf(" vs ") >=0){
+          namePart = parts[j];
+        }
+        else {
+          newTitle += parts[j] + markers[i];
+        }
+      }
     }
   }
-  return newName;
+
+  return newTitle;
+}
+
+
+function setupClickHandlers(){
+  let allTabButtons = document.querySelectorAll(".tabs .tab");
+  for(let i=0; i<allTabButtons.length; i++){
+    allTabButtons[i].onclick = () => {
+      replaceSpoilerImagesAndText();
+    }
+  }
 }
 
 ///////
@@ -132,3 +171,6 @@ function AddSpan(text){
 function UpdateTime(){
   UpdateTimers(Math.floor(videoElement.currentTime));
 }
+
+
+

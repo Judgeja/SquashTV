@@ -8,6 +8,9 @@ article .featured-image img, .article-related .repeat-inner img, article .featur
   display: none!important;
 }
 
+article .title a, .article-related .repeat-inner h2 a{
+  opacity: 0;
+}
 
 .squashtv-nospoiler-toplist{
   text-align: center;

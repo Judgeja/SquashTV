@@ -1,0 +1,8 @@
+/* .np_Filmstrip-time, .np_TimerContent-duration, .np_Seek  {
+    display: none!important;
+} */
+
+.duration , .button_play_right, .seek_tooltip{
+display: none!important;
+}
+  

@@ -1,6 +1,6 @@
 {
   "name": "SquashTV Spoilers",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "manifest_version": 3,
   "description": "Removes names and images from video titles, and time display from the video.",
   "content_scripts": [
@@ -8,6 +8,8 @@
       "matches": [
         "https://www.squash.tv/",
         "https://www.squash.tv/highlights/*",
+        "https://www.squash.tv/tournament/*",
+        "https://www.squash.tv/*",
         "https://www.squash.tv/replays/*",
         "https://squash.tv/replays/*"
       ],
@@ -17,6 +19,15 @@
       "css": [
         "content_scripts/squashtv-nospoiler.css"
       ]
+    },
+    {
+      "matches": [
+        "https://geo.dailymotion.com/*"
+      ],
+      "css": [
+        "content_scripts/dailymotion.css"
+      ], 
+      "all_frames": true
     }
   ],
   "icons": {
